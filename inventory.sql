@@ -55,13 +55,14 @@ INSERT INTO Categories (CategoryID, CategoryName) VALUES (2, 'Clothing');
 INSERT INTO Categories (CategoryID, CategoryName) VALUES (3, 'Books');
 INSERT INTO Categories (CategoryID, CategoryName) VALUES (4, 'Toys');
 INSERT INTO Categories (CategoryID, CategoryName) VALUES (5, 'Furniture');
+INSERT INTO Categories (CategoryID, CategoryName) VALUES (6, 'Hardware');
+
 
 -- Populate the 'Products' table with sample data
 INSERT INTO Products (ProductID, ProductName, CategoryID, Price, CreatedDate, UpdatedDate) VALUES (1, 'Laptop', 1, 899.99, GETDATE(), GETDATE());
 INSERT INTO Products (ProductID, ProductName, CategoryID, Price, CreatedDate, UpdatedDate) VALUES (2, 'T-shirt', 2, 19.99, GETDATE(), GETDATE());
 INSERT INTO Products (ProductID, ProductName, CategoryID, Price, CreatedDate, UpdatedDate) VALUES (3, 'Book', 3, 9.99, GETDATE(), GETDATE());
 INSERT INTO Products (ProductID, ProductName, CategoryID, Price, CreatedDate, UpdatedDate) VALUES (4, 'Action Figure', 4, 14.99, GETDATE(), GETDATE());
-INSERT INTO Products (ProductID, ProductName, CategoryID, Price, CreatedDate, UpdatedDate) VALUES (5, 'Sofa', 5, 499.99, GETDATE(), GETDATE());
 
 -- Create a stored procedure to get all categories
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE name = 'GetAllCategories' AND type = 'P')
